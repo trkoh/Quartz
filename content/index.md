@@ -1,6 +1,8 @@
 ---
-title: Welcome to Quartz
+title: 🏠Home
+tags: 
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+## 🏷️ タグ
+
+### [全てのタグ](/tags)
