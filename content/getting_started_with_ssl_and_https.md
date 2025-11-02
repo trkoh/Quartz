@@ -1,7 +1,14 @@
-# タイトル
+---
+title: 食べる！SSL！　―HTTPS環境構築から始めるSSL入門
+draft: false
+tags: [book]
+date: 2025-11-02
+---
 
+---
 - [食べる！SSL！　―HTTPS環境構築から始めるSSL入門](https://www.amazon.co.jp/%E9%A3%9F%E3%81%B9%E3%82%8B%EF%BC%81SSL%EF%BC%81-%E2%80%95HTTPS%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8BSSL%E5%85%A5%E9%96%80-%E5%B0%8F%E5%B3%B6-%E6%8B%93%E4%B9%9F-ebook/dp/B00PHC4480)
 
+<img src="https://m.media-amazon.com/images/I/911DGaVfT7L._SL1500_.jpg" style="display: block; margin: 0 auto;" width="200"/>
 ---
 
 # 1. セキュリティの重要性
