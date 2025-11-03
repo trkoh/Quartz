@@ -45,9 +45,6 @@
     "source=claude-code-bashhistory-${devcontainerId},target=/commandhistory,type=volume",
     "source=claude-code-config-${devcontainerId},target=/home/node/.claude,type=volume"
   ],
-  "remoteEnv": {
-    "SSH_AUTH_SOCK": "/run/host-services/ssh-auth.sock"
-  },
   "containerEnv": {
     "NODE_OPTIONS": "--max-old-space-size=4096",
     "CLAUDE_CONFIG_DIR": "/home/node/.claude",
