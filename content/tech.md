@@ -12,4 +12,4 @@ tags:
 
 - #docker
 - #aws
-    - #aws/codecommit
+    - #aws/CodeCommit
