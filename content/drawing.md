@@ -7,6 +7,8 @@ tags:
 
 # #drawing
 
+
+
 ## アタリ
 
 ![アタリ1](https://d3a21s3joww9j4.cloudfront.net/1746926424794.png)
