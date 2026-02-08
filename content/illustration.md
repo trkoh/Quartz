@@ -14,5 +14,5 @@ tags:
 
 ## Drawing Notes
 
-[Drawing Notes](drawing.md) - 体のパーツごとの描き方メモ
+[Drawing Notes](drawing/index.md) - 体のパーツごとの描き方メモ
 

@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import ImageLightbox from "./ImageLightbox"
 import LinksHeader from "./LinksHeader"
+import Gallery from "./Gallery"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   ImageLightbox,
   LinksHeader,
+  Gallery,
 }

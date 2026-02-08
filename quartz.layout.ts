@@ -16,6 +16,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.ImageLightbox(),
+    Component.Gallery(),
     Component.ConditionalRender({
       component: Component.RecentNotes({
         title: "Recent Notes",
