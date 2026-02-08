@@ -1,14 +1,39 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+const linksHeader = Component.LinksHeader({
+  links: [
+    { text: "About", slug: "about" },
+    { text: "Blog", slug: "tags/blog" },
+    { text: "Illustration", slug: "illustration" },
+    { text: "Tags", slug: "tags" },
+  ],
+})
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.ImageLightbox()],
+  afterBody: [
+    Component.ImageLightbox(),
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "Recent Tech Notes",
+        showTags: false,
+        limit: 10,
+        filter: (f) => {
+          const tags = f.frontmatter?.tags ?? []
+          return !tags.includes("blog") && !tags.includes("index") && !tags.includes("drawing")
+        },
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/trkoh",
+      X: "https://x.com/PLACEHOLDER",
+      LinkedIn: "https://linkedin.com/in/PLACEHOLDER",
     },
   }),
 }
@@ -37,17 +62,10 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer({
-      filterFn: (node) => {
-        // exclude files with the tag "explorerexclude"
-        return node.data?.tags?.includes("index") == true
-      },
-    }),
+    linksHeader,
   ],
   right: [
-    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5 }),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
   ],
 }
 
@@ -66,7 +84,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    linksHeader,
   ],
   right: [],
 }

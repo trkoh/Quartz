@@ -1,12 +1,9 @@
 ---
-title: ✍️ drawing
+title: Drawing Notes
 aliases: drawing
 tags:
-    - index
+    - drawing
 ---
-
-# #drawing
-
 
 
 ## アタリ
