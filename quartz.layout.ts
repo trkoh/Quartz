@@ -18,7 +18,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.ImageLightbox(),
     Component.ConditionalRender({
       component: Component.RecentNotes({
-        title: "Recent Tech Notes",
+        title: "Recent Notes",
         showTags: false,
         limit: 10,
         filter: (f) => {
@@ -32,8 +32,8 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/trkoh",
-      X: "https://x.com/PLACEHOLDER",
-      LinkedIn: "https://linkedin.com/in/PLACEHOLDER",
+      X: "https://x.com/teraka_",
+      LinkedIn: "https://www.linkedin.com/in/kohei-terakawa-086465240",
     },
   }),
 }
