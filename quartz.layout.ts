@@ -5,7 +5,7 @@ const linksHeader = Component.LinksHeader({
   links: [
     { text: "About", slug: "about" },
     { text: "Blog", slug: "tags/blog" },
-    { text: "Illustration", slug: "illustration" },
+    { text: "Oekaki", slug: "oekaki" },
     { text: "Tags", slug: "tags" },
   ],
 })
