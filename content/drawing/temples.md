@@ -1,7 +1,7 @@
 ---
 title: 寺社
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 ![寺社1](https://d3a21s3joww9j4.cloudfront.net/1745623665209.png)

@@ -1,8 +1,7 @@
 ---
 title: Drawing Notes
 tags:
-    - drawing
-    - oekaki
+    - oekaki/drawing
 cssclasses:
     - gallery
 ---

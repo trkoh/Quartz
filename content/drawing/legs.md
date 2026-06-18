@@ -1,7 +1,7 @@
 ---
 title: 脚
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 [脚についてのノート](../202511022339.md)

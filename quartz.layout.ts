@@ -24,7 +24,7 @@ export const sharedPageComponents: SharedLayout = {
         limit: 10,
         filter: (f) => {
           const tags = f.frontmatter?.tags ?? []
-          return !tags.includes("blog") && !tags.includes("index") && !tags.includes("drawing")
+          return !tags.includes("blog") && !tags.includes("index") && !tags.includes("oekaki/drawing")
         },
       }),
       condition: (page) => page.fileData.slug === "index",

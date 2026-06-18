@@ -1,7 +1,7 @@
 ---
 title: 顔
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 ![顔1](https://d3a21s3joww9j4.cloudfront.net/1637298248000.png)

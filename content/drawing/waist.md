@@ -1,7 +1,7 @@
 ---
 title: 腰
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 ![腰1](https://d3a21s3joww9j4.cloudfront.net/1678511027000.png)

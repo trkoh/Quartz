@@ -1,7 +1,7 @@
 ---
 title: 肩
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 [肩についてのノート](../202511102323.md)

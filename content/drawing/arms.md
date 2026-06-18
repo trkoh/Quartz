@@ -1,7 +1,7 @@
 ---
 title: 腕
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 ![腕1](https://d3a21s3joww9j4.cloudfront.net/1637125455000.png)

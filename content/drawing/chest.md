@@ -1,7 +1,7 @@
 ---
 title: 胸
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 ![胸1](https://d3a21s3joww9j4.cloudfront.net/1746885803276.png)

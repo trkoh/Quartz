@@ -1,7 +1,7 @@
 ---
 title: 手
 tags:
-    - drawing
+    - oekaki/drawing
 ---
 
 [手についてのノート](../202511050004.md)
