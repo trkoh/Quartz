@@ -4,7 +4,6 @@ import * as Component from "./quartz/components"
 const linksHeader = Component.LinksHeader({
   links: [
     { text: "About", slug: "about" },
-    { text: "Blog", slug: "tags/blog" },
     { text: "Oekaki", slug: "oekaki" },
     { text: "Tags", slug: "tags" },
   ],
