@@ -16,11 +16,26 @@ interface Item {
 type SearchType = "basic" | "tags"
 let searchType: SearchType = "basic"
 let currentSearchTerm: string = ""
+
+// Word-level tokenization via Intl.Segmenter so CJK text (which has no
+// spaces between words) can be searched the same way as space-separated
+// languages. Falls back to whitespace splitting where unsupported.
+const wordSegmenter: Intl.Segmenter | undefined =
+  typeof Intl !== "undefined" && "Segmenter" in Intl
+    ? new Intl.Segmenter("ja", { granularity: "word" })
+    : undefined
+
 const encoder = (str: string) => {
-  return str
-    .toLowerCase()
-    .split(/\s+/)
-    .filter((token) => token.length > 0)
+  const lower = str.toLowerCase()
+  if (wordSegmenter) {
+    const tokens: string[] = []
+    for (const { segment, isWordLike } of wordSegmenter.segment(lower)) {
+      if (isWordLike) tokens.push(segment)
+    }
+    return tokens
+  }
+
+  return lower.split(/\s+/).filter((token) => token.length > 0)
 }
 
 let index = new FlexSearch.Document<Item>({
@@ -63,9 +78,21 @@ const tokenizeTerm = (term: string) => {
   return tokens.sort((a, b) => b.length - a.length) // always highlight longest terms first
 }
 
+// Splits body text into segments for the result preview snippet. When
+// Intl.Segmenter is available, every segment (words, punctuation, and
+// whitespace alike) is kept so the original text can be rejoined with ""
+// without inserting spaces that CJK text never had.
+function segmentContent(text: string): { tokens: string[]; joiner: string } {
+  if (wordSegmenter) {
+    return { tokens: [...wordSegmenter.segment(text)].map((s) => s.segment), joiner: "" }
+  }
+  return { tokens: text.split(/\s+/).filter((t) => t !== ""), joiner: " " }
+}
+
 function highlight(searchTerm: string, text: string, trim?: boolean) {
   const tokenizedTerms = tokenizeTerm(searchTerm)
-  let tokenizedText = text.split(/\s+/).filter((t) => t !== "")
+  const { tokens, joiner } = segmentContent(text)
+  let tokenizedText = tokens
 
   let startIndex = 0
   let endIndex = tokenizedText.length - 1
@@ -101,7 +128,7 @@ function highlight(searchTerm: string, text: string, trim?: boolean) {
       }
       return tok
     })
-    .join(" ")
+    .join(joiner)
 
   return `${startIndex === 0 ? "" : "..."}${slice}${
     endIndex === tokenizedText.length - 1 ? "" : "..."
